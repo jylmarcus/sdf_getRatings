@@ -23,18 +23,6 @@ public class AppInfo {
         return rating;
     }
 
-    public void setAppName(String appName) {
-        this.appName = appName;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setRating(Float rating) {
-        this.rating = rating;
-    }
-
     public String toString() {
         return "[AppName: " + this.appName + ", Category: " + this.category + ", Rating: " + this.rating + "]"; 
     }

@@ -19,8 +19,11 @@ public class FileHandler {
         String line = br.readLine();
         
         while((line=br.readLine()) != null) {
+
             String[] rawInfo = line.split(",");
             AppInfo appinfo = new AppInfo(rawInfo[0], rawInfo[1], Float.parseFloat(rawInfo[2]));
+
+            //sort into hashmap by categories
             categorySorted.putIfAbsent(rawInfo[1], new ArrayList<AppInfo>());
             ArrayList<AppInfo> tempList = categorySorted.get(rawInfo[1]);
             tempList.add(appinfo);
